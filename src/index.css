@@ -1,13 +1,75 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #e8e8f2;
+}
+.link{
+  color: #3438cd;
+  text-decoration: none;
+}
+.link:hover{
+  color: #272cbe;
+  text-decoration: none;
+}
+.login-container{
+  width:30vw;
+  
+  
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.login-page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+}
+.login-logo{
+  margin-bottom: 60px;
+}
+.login-logo span{
+ color: #3438cd;
+}
+.login-logo h2{
+  color:#fff;
+}
+.login-head{
+  margin-bottom: 40px;
+ 
+}
+.login-head h2{
+  color: #3438cd;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+.form-group input{
+  
+ 
+  margin: 8px 0;
+}
+.login-btn{
+  background-color: #3438cd;
+  width: 100%;
+  margin: 20px 0;
+}
+.login-btn:hover{
+  color: #3438cd;
+  width: 100%;
+  outline: #3438cd;
 }
