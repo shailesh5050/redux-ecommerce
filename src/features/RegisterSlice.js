@@ -1,16 +1,16 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const loginURL="http://localhost:1337/api/auth/local";
+
 const registerURL="http://localhost:1337/api/auth/local/register";
 
-export const loginRequest=createAsyncThunk("auth/login",async (user,thunkAPI)=>{
-    const response= await axios.post(loginURL,user);
+export const registerRequest=createAsyncThunk("register_auth/register",async (user,thunkAPI)=>{
+    const response= await axios.post(registerURL,user);
     return response.data;
     
 });
-const AuthSlice=createSlice({
-    name: "auth",
+const RegisterSlice=createSlice({
+    name: "register_auth",
     initialState: {
         isAuth: false,
         token: null,
@@ -18,34 +18,23 @@ const AuthSlice=createSlice({
         loading: false,
         error: null,
     },
-    reducers: {
-       
-        logout:{
-            reducer(state, action) {
-                state.isAuth = false;
-                state.token = null;
-                state.userId = null;
-            }
-        },
-
-    },
+    reducers: {},
     extraReducers(builder) {
         builder
-            .addCase(loginRequest.pending,(state, action) => {
+            .addCase(registerRequest.pending,(state, action) => {
             state.loading = true;
             state.error = null;
         })
-        .addCase(loginRequest.fulfilled,(state, action) => {
+        .addCase(registerRequest.fulfilled,(state, action) => {
             state.loading = false;
             state.error = null;
             state.isAuth = true;
             state.token = action.payload.jwt;
             state.userId = action.payload.user.id;
-            
         })
-        .addCase(loginRequest.rejected,(state, action) => {
+        .addCase(registerRequest.rejected,(state, action) => {
             state.loading = false;
-            state.error = "Invalid Credentials";
+            state.error = action.error.message;
             state.isAuth = false;
             state.token = null;
             state.userId = null;
@@ -55,6 +44,6 @@ const AuthSlice=createSlice({
 
 
 });
-export const { logout } = AuthSlice.actions;
+export const { logout } = RegisterSlice.actions;
 
-export default AuthSlice.reducer;
+export default RegisterSlice.reducer;

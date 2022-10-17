@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
-import { loginRequest } from '../features/AuthSlice';
+import { loginRequest } from '../features/LoginSlice';
 import { Link } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const data= useSelector(state=>state.auth);
+  const data= useSelector(state=>state.login);
   useEffect(() => {
         if(data.error=="Invalid Credentials"){
             setError(data.error);
