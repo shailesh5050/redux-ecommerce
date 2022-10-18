@@ -1,9 +1,7 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 const registerURL="http://localhost:1337/api/auth/local/register";
-
 export const registerRequest=createAsyncThunk("register_auth/register",async (user,thunkAPI)=>{
     const response= await axios.post(registerURL,user);
     return response.data;
@@ -45,5 +43,4 @@ const RegisterSlice=createSlice({
 
 });
 export const { logout } = RegisterSlice.actions;
-
 export default RegisterSlice.reducer;

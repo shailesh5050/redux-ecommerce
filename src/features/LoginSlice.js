@@ -2,8 +2,6 @@ import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const loginURL="http://localhost:1337/api/auth/local";
-const registerURL="http://localhost:1337/api/auth/local/register";
-
 export const loginRequest=createAsyncThunk("login_auth/login",async (user,thunkAPI)=>{
     const response= await axios.post(loginURL,user);
     return response.data;
@@ -56,5 +54,4 @@ const LoginSlice=createSlice({
 
 });
 export const { logout } = LoginSlice.actions;
-
 export default LoginSlice.reducer;

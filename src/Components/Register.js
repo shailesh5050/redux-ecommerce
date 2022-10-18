@@ -58,7 +58,7 @@ const Register = () => {
               <small id="emailHelp" className="form-text  text-danger">{error}</small>
             </div>
               <button className='btn btn-block btn-primary login-btn' >Register</button>
-              <p>Already have an account? <a className='link' href="/register">Login</a></p>
+              <p>Already have an account? <Link className='link' to="/login">Login</Link></p>
           </form>
           </div>
       </div>
