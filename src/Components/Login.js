@@ -41,7 +41,7 @@ const Login = () => {
       </div>
       <div className="login-head">
         <h2>Login</h2>
-        <p>Please Login to Get Magic Delivery to Your Door Step</p>
+        <p>Please Login to Get Magic Delivered to Your Door Step</p>
       </div>
       <div className="login-form">
         <form onSubmit={login}>
