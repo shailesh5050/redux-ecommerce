@@ -7,6 +7,12 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color: #e8e8f2;
+ 
+}
+.link{
+  text-decoration: none;
+  outline: none;
+  
 }
 .link{
   color: #3438cd;
@@ -69,7 +75,17 @@ body{
   margin: 20px 0;
 }
 .login-btn:hover{
-  color: #3438cd;
-  width: 100%;
-  outline: #3438cd;
+  background-color: #0b12db;
+  
+  
 }
+.footer{
+  margin-top: 100px;
+  text-align: center;
+  background-color: #151515;
+  text-align: center;
+  color: #fff;
+  height: 80px;
+  line-height: 80px;
+}
+

@@ -8,6 +8,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import { useLocation } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+
 function App() {
   const location = useLocation();
   let path = location.pathname;
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/*" element={<NotFound/>}/>
      </Routes>  
+     
     </div>
   );
 }

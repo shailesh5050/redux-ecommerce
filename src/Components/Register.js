@@ -36,7 +36,7 @@ const Register = () => {
       <div className='login-page'>
         <div className='login-container'>
         <div className='login-logo'>
-          <h2>Apple <span>Cart</span> </h2>
+        <h2><Link to="/" className='link' >Apple <span>Cart</span></Link> </h2> 
         </div>
         <div className="login-head">
           <h2>Register</h2>

@@ -1,9 +1,11 @@
 import React from 'react'
-import Produscts from './Produscts'
+import Products from './Products'
+import Footer from './Footer';
 const Home = () => {
   return (
     <>
-        <Produscts/>
+        <Products />
+        <Footer />
     </>
   )
 }
